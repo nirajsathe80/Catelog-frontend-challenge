@@ -57,15 +57,11 @@ const Chart = ({ dates, price }: ChartProps) => {
   };
 
   return (
-    <div className="p-4 rounded-md mt-4">
-      {dates ? (
-        <div className="md:h-[400px] h-[200px]">
-          <TimePeriodSelector />
-          <Line data={chartData} options={options} />
-        </div>
-      ) : (
-        <p className="text-4xl">Loading chart...</p>
-      )}
+    <div className="p-4 rounded-md">
+      <div className="lg:h-[400px] md:h-[300px] h-[200px]">
+        <TimePeriodSelector />
+        <Line data={chartData} options={options} />
+      </div>
     </div>
   );
 };

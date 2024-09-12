@@ -14,7 +14,6 @@ const Heading = function () {
 
   const price =
     filteredPrices.length > 0 ? filteredPrices[filteredPrices.length - 1] : 0;
-
   return (
     <div className="pb-4">
       <p className="text-2xl font-bold">

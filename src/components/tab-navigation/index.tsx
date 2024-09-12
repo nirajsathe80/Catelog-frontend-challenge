@@ -11,9 +11,11 @@ const TabNavigation = () => {
           return (
             <li className="me-2" key={value}>
               <div
-                className={`inline-block sm:p-4 p-1 border-b-2 rounded-t-lg  cursor-pointer ${
-                  value === currentTab ? "text-black border-blue-400 z-10 " : ""
-                } hover:text-blue-300  `}
+                className={`inline-block sm:p-4 p-1  rounded-t-lg  cursor-pointer ${
+                  value === currentTab
+                    ? "text-black border-blue-400 z-10 border-b-2 "
+                    : ""
+                }   `}
                 onClick={() => updateCurrentTab(value)}
               >
                 {label}

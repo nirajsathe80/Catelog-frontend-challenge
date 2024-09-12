@@ -10,8 +10,12 @@ export const fetchData = async function (): Promise<Data> {
     );
     const data: IData = await result.json();
 
-    date = data.prices.map((price) => new Date(price[0]).toLocaleDateString());
-    price = data.prices.map((price) => parseInt(price[1])?.toFixed(2));
+    date = data.prices
+      .map((price) => new Date(price[0]).toLocaleDateString())
+      .reverse();
+    price = data.prices
+      .map((price) => parseInt(price[1])?.toFixed(2))
+      .reverse();
     return { date, price };
 
     // setData({ labels, values });
